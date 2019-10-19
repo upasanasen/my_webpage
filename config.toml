@@ -1,61 +1,77 @@
-baseURL = "https://upasanasen.github.io/"
-title = "Upasana's Blog"
+## Basic Configuration
+
+baseurl = "upasanasen.github.io"
+builddrafts = false
+canonifyurls = false
+languagecode = "en-US"
+
+contentdir = "content"
+layoutdir = "layouts"
+publishdir = "public"
+
+author = "Upasana Sen"
+title = "Upasana Sen"
+
 theme = "manis"
 
+
 # Copyright notice. Note: You can use HTML tag here
-copyright = "&copy; 2019 Upasana Sen"
+copyright = "&copy; 2019 Upasana Sen <a href=\"http://creativecommons.org/licenses/by/3.0/\">Some Rights Reserved</a>."
 pluralizeListTitles = false
 
 # Minimum number of posts before paginate navigation show up
 paginate = 10
 
-# Your disqus shortname
-disqusShortname = ""
-
-# Edit this if you want to translate your blog
-defaultContentLanguage = "en"
-
 # Code Highlighting (Chroma)
 pygmentsCodeFences = true
 pygmentsUseClasses = true
 
-[menu]
-	[[menu.main]]
-		name = "Post"
-		url = "/post/"
-	
-	[[menu.main]]
-		name = "About"
-		url = "/about"
+[[menu.main]]
+    name = "about"
+    identifier = "about"
+    weight = 100
+    url = "/about"
+[[menu.main]]
+    name = "blog"
+    identifier = "blog"
+    weight = 200
+    url = "/blog/"
+
 
 [taxonomies]
 	tag = "tags"
 
+
+
+## Site Settings
 [params]
-	# If false, use minified CSS (ui.min.css)
-	debugCSS = false
-	# Custom CSS
-	customCSS = []
-	
-	# Site meta description
-	description = "Hi! I am a Master's student in Environmental studies and sustainability at Lund University."
-	# Site's Tagline (Subtitle or Keyword)
-	tagline = "Nothing sweeter than this"
-	# If true give attribution to this theme
+    author = "Upasana Sen"
+    intro = "Environmental Studies and Sustainability Science master student at Lund University"
+    description = "Sweet little Hugo's theme for personal website or blog."
+    authorimage = "headshot.jpg"
+    dateformat = "Jan 2, 2006"
+
+    tagline = "random tidbits"
+    #keywords = ""
+
+    # If true give attribution to this theme
 	themeAttrib = true
+
 	# URL to license file, can be outside of your domain
-	licenseURL = "/about/license"
+	#licenseURL = "/about/license"
 
 	# Configure which sections for Latest Posts
-	mainSections = ["blog", "post"]
+	mainSections = ["blog"]
+
 	# Configure which sections for Latest Works
-	workSections = ["work"]
-	
+	#workSections = ["projects"]
+
 	# List of sections that support disqus comments
 	disqusSections = [ "blog" ]
+
 	# List of sections that support utterances comments
 	utterancesSections = [ "blog" ]
-	
+
 	# Utterances Configuration
 	utterancesRepo = ""
 	utterancesTheme = "github-light"
@@ -66,28 +82,35 @@ pygmentsUseClasses = true
 	sub404 = "Back to <a href='/'>Home</a>."
 
 	# Color of your website's accent
-	colorTheme = "#ff6565"
+	#colorTheme = "#ff6565"
+
 	# Maximum number of item in Latest Posts or Works
-	latestCount = 3
-	# Path to site's favicon image
-	faviconImg = ""
-	# Date format in item list
-	dateFmt = "Jan 02, 2006"
+	latestCount = 5
+
+	# Path to site's favicon image  (path: /static/images/headshot.jpg replace there)
+	faviconImg = "images/headshot.jpg"
 
 	# Code Highlighting (HighlightJS)
 	highlightJs = false
 	highlightJsLanguages = [ "go" ]
 	highlightJsStyle = "ocean"
 
-	# Social Links
-	email = "up7533se-s@student.lu.se"
-	github = "https://github.com/upasanasen"
-	linkedin = "https://www.linkedin.com/in/upasana-sen-693830104/"
-#twitter = 
+    github = "upasanasen"
+    linkedin = "upasana-sen-693830104"
+    email = "upasana19sen95@gmail.com"
+
+## Main Menu
+#[[menu.main]]
+#    name = "resume"
+#    identifier = "resume"
+#    weight = 100
+#    url = "/resume.pdf"
+#[[menu.main]]
+#    name = "projects"
+#    identifier = "projects"
+#    weight = 200
+#    url = "/projects/"
 
 
-# Language Configuration
-#[languages.in]
-#	lang = "in"
-#	languageName = "Bahasa Indonesia"
-#	weight = 1
+
+
